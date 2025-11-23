@@ -2,7 +2,8 @@
   description = "Collection of nix packages";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixconfig.url = "github:sabitm/nix-config";
+    nixpkgs.follows = "nixconfig/nixpkgs";
   };
 
   outputs = inputs@{ nixpkgs, ... }:
